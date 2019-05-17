@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<meta http-equiv="refresh" content="3">-->
+    <title>www.property.com/user/tenant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style/website.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/websitecontent.css">
+    <!--content1.css just contains stylings of the footer-->
+    <link rel="stylesheet" href="style/content1.css">
+</head>
+
+<body>
+    <script src="js/webtop.js">
+    </script>
+    <div id="top">
+        <img src="logo.png" alt="property logo">
+        <h1>company Name</h1><br />
+        <div id="signup">
+            <div id="log-menu"><span class="lm"></span><span class="lm"></span><span class="lm"></span><span
+                    class="lm"></span></div>
+            <nav id="info">
+                <li class="info" id="home">Home</li>
+                <li class="info" id="property">Properties</li>
+                <li class="info" id="about">About</li>
+                <li class="info" id="payment">Payment</li>
+            </nav>
+            <nav id="log">
+                <li class="log" onclick="logout()"><a href="index.html">logout</a></li>
+            </nav>
+        </div>
+    </div>
+    <div id="content">
+
+
+
+        <!--endof complaint-->
+        <div id="complaint">
+            <div class="drop">
+
+                <script>
+                    function allowDrop(ev) {
+                        ev.preventDefault();
+                    }
+
+                    function drag(ev) {
+                        ev.dataTransfer.setData("text", ev.target.id);
+                    }
+
+                    function drop(ev) {
+                        ev.preventDefault();
+                        var data = ev.dataTransfer.getData("text");
+                        ev.target.appendChild(document.getElementById(data));
+                    }
+                </script>
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+            </div>
+
+            <form action="complaint.php" method="post">
+                <div class="photo complaint">
+                    <input type="file" name="photo" value="upload photo"><label for="photo">photo</label>
+                </div>
+                <div class="complaint">
+                    <label for=""></label>
+                    <input type="text" name="category" placeholder="category">
+                </div>
+                <div class="complaint">
+                    <label for=""></label>
+                    <input type="text" name="description" placeholder="description">
+                </div>
+            </form>
+
+
+        </div>
+        <!--end of complaint-->
+
+
+
+        <div id="home1" class="item">
+            <p>Property provides house rentals in which a clien can rent or hire anduse.</p>
+            <p>You can book online from this site or even make payment there and then.</p>
+
+            <div id="disp">
+
+                <div class="item">
+
+                </div>
+                <div class="item"></div>
+            </div>
+
+        </div>
+        <!--id property refers to propert-->
+        <div id="propert">
+            <form action="searchSite.php" name="searchSite">
+                <div class="search">
+                    <input type="search" placeholder=" search property">
+                </div>
+                <div class="search">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+
+            <!--
+                php goes here for the property and details.
+            -->
+
+
+
+
+            <!--actually  class item is a class belonging to div containers carrying properties and details-->
+            <div class="item">
+                <img src="property.png" alt="property_name">
+                <div class="details">
+                    <div class="detail">
+                        <p>PropertyID</p>
+                    </div>
+                    <div class="detail">
+                        <p>Property Name</p>
+                    </div>
+                    <div class="detail">
+                        <p>Cost</p>
+                    </div>
+                    <div class="detail">
+                        <p>Property state</p>
+                    </div>
+                    <div class="detail">
+                        <p>Location</p>
+                    </div>
+                    <div class="detail">
+                        <p>pay</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--class item is to be automatically retrieved from the database by php and created by javascript-->
+            <!--Items displayed are to beinaccordance with the number of items present in the database.-->
+
+
+            <div class="item">
+                <img src="property.png" alt="property_name">
+                <div class="details">
+                    <div class="detail">
+                        <p>PropertyID</p>
+                    </div>
+                    <div class="detail">
+                        <p>Property Name</p>
+                    </div>
+                    <div class="detail">
+                        <p>Cost</p>
+                    </div>
+                    <div class="detail">
+                        <p>Property state</p>
+                    </div>
+                    <div class="detail">
+                        <p>Location</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="item">
+                <img src="property.png" alt="property_name">
+                <div class="details">
+                    <div class="detail">
+                        <p>PropertyID</p>
+                    </div>
+                    <div class="detail">
+                        <p>Property Name</p>
+                    </div>
+                    <div class="detail">
+                        <p>Cost</p>
+                    </div>
+                    <div class="detail">
+                        <p>Property state</p>
+                    </div>
+                    <div class="detail">
+                        <p>Location</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+    <div id="footer">
+        <div id="address" class="footer">
+            <h4>Address</h4>
+            <p id="location">Located at: <span class="info">bugolobi plot 55</span></p>
+            <p> Tel: <span class="info">0775506061</span></p>
+            <p> Email: <span class="info"><a href="property@info" class="info">property@info</a></span></p>
+            <p><a href="www.property.com">www.property.com</a></p>
+        </div>
+        <hr>
+        <div id="Service" class="footer">
+            <h4>Terms of service</h4>
+
+            <p>&copy;<a href="www.property.com">www.property.com</a></p>
+        </div>
+        <hr>
+        <div id="contact" class="footer">
+            <h4>Follow us:</h4>
+            <div class="follow">
+                <img src="whatsapp.png" alt="">
+                <p>0778890201</p>
+            </div>
+            <div class="follow">
+                <img src="facebook.png" alt="">
+                <p>property@facebook.com</p>
+            </div>
+            <div class="follow">
+                <img src="twiter.png" alt="">
+                <p>@property</p>
+            </div>
+        </div>
+    </div>
+
+</html>

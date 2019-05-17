@@ -1,0 +1,51 @@
+/*these footer styles only apply to tenants view footer specifically*/
+
+#footer {
+    display: block;
+    background-color: #222;
+}
+
+.footer {
+    display: inline-block;
+    padding: 5%;
+}
+
+#footer a {
+    color: #ff0;
+}
+
+h4 {
+    text-align: center;
+    color: rgb(233, 242, 250);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #ffe;
+}
+
+#address p {
+    display: block;
+}
+
+#footer p {
+    color: #eee;
+    padding: 0;
+}
+
+#content img {
+    display: inline;
+}
+
+.follow {
+    display: block;
+}
+
+.follow p {
+    display: inline;
+}
+
+hr {
+    display: inline;
+    height: 100px;
+    width: 1px;
+    background-color: aliceblue;
+}
